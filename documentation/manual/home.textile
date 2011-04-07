@@ -61,7 +61,7 @@ You can declare some action parameter the same way you do it in Java:
 
 bc. def index(name: String) = <h1>Hello {name}</h1>
 
-To big plus of scala is the ability to define some default values to these parameters:
+One big plus of Scala is the ability to define some default values for this parameter:
 
 bc. def index(name: String = "Guest") = <h1>Hello {name}</h1>
 
@@ -140,7 +140,7 @@ p(note). Notice the two import statements. Due to changes in scala 2.8 rc2, the 
 
 h3. <a>Running queries against Models</a>
 
-"The API":http://github.com/guillaumebort/play-scala/blob/master/src/play/db/jpa/QueryOn.scala is really similar to the java so, so for example to count the number of users, you can just call count on the User class (assuming you defined the appropriate companion object):
+"The API":http://github.com/guillaumebort/play-scala/blob/master/src/play/db/jpa/QueryOn.scala is really similar to the java one, so for example to count the number of users, you can just call count on the User class (assuming you defined the appropriate companion object):
 
 bc. User.count
 
@@ -150,7 +150,7 @@ bc. QueryOn[Post].find("select distinct p.id from Post p join p.tags as t where 
 
 Another approach to access models is to utilize *play.db.jpa.QueryOn* object, so using the previous example: *User.count* becomes *QueryOn[User].count* 
 
-p(note). Usually, it's recommended to use the companinon object form to provide query functionality (ie. User.count). The main advantage of the more generic *QueryOn* approach is that it's working with both *scala and java* models. 
+p(note). Usually, it's recommended to use the companion object form to provide query functionality (ie. User.count). The main advantage of the more generic *QueryOn* approach is that it's working with both *scala and java* models. 
 
 
 h2. <a>Cache API</a>
